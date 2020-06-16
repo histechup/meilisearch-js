@@ -9,6 +9,12 @@ import {
   PUBLIC_KEY,
 } from './meilisearch-test-utils'
 
+type Movie = {
+  id: number
+  title?: string
+  comment?: string
+}
+
 const uidNoPrimaryKey = {
   uid: 'movies_test',
 }
