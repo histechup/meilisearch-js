@@ -33,7 +33,8 @@ describe.each([
   })
   test(`${permission} key: getOrCreateIndex on already existing index`, async () => {
     await masterClient.createIndex(index.uid)
-    const newIndex = await client.getOrCreateIndex(index.uid)
+    let newIndex = await client.getOrCreateIndex(index.uid)
+    newIndex = await client.getOrCreateIndex(index.uid)
     expect(newIndex.uid).toEqual(index.uid)
   })
 
